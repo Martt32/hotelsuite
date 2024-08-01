@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+body{
+  background: rgb(255, 255, 255);
+}
+.input{
+  width: 30vw;
+
+}
+.sidebar{
+  height: 100vh;
+  width: 250px;
+  background: rgb(238, 238, 238);
+  left: 0;
+  top: 0;
+}
+.content{
+  right: 0;
+  width: 80vw;
+}
+.addButton{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.reservations{
+  transition: .05s;
+}
+.reservations:hover{
+  transition: .05s;
+  transform: scale(1.01);
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+td{
+  padding: 15px;
+  text-align: left;
+}
+.reserve{
+  transition: .3s all ease-in-out;
+}
+.reserve:hover{
+  
+  transform: scale(1.05);
+}
+th{
+  padding: 15px;
+  text-align: left;
+}
+
+.form-step {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form-step.visible {
+  opacity: 1;
+  position: relative;
+}
+#bookingHide{
+  visibility: collapse;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+#bookingHide.visible{
+  visibility: visible;
+  opacity: 1;
+}.popup .overlay{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0,0.7);
+  z-index: 1;
+  display: none;
+  transition: all 0.5s;
+
+}
+.popup.active .overlay{
+  display: flex;
+}
+#task-form{
+  width: 30vw;
+  height: 50vh;
+}
+
+.popup.active .content{
+  transition: all 300ms ease-in-out;
+  width: 50vw;
+  height: 70vh;
+  background-color: #3a3f49;
+}
+.menu{
+  transition: .2s all ease-in-out;
+}
+.menu:hover{
+  background: #3e00cf3f;
+}
+.scale{
+  transition:.5s all ease-in-out;
+}
+.scale:hover{
+  transform: scale(1.05);
+}
+.highlight{
+  transition: .5s all ease-in-out;
+}
+.highlight:hover{
+  background: #187b3645;
+
+}
+.Content{
+  height: 91vh;
+  width: 160vh;
+}
