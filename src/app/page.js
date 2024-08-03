@@ -8,7 +8,7 @@ function Home (){
                 console.log('popped up')
             }
     return (
-    <div className='flex flex-col justify-center items-center p-4'>
+    <div className='flex flex-col text-black justify-center items-center p-4'>  
         <div className='flex w-full justify-between'>
         <p className='font-bold text-initClr'>Welcome, Martins Charles</p>
         </div>

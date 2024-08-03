@@ -152,3 +152,13 @@ th{
   height: 91vh;
   width: 160vh;
 }
+.form-step {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.form-step.visible {
+  opacity: 1;
+  position: relative;
+}

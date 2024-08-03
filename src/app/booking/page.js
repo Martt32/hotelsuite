@@ -22,6 +22,8 @@ const Content=()=>{
       }  
     }
     const addReservations =(x)=>{
+        console.log('reservation:',x)
+        console.log(reservations)
         const id = Math.floor(Math.random() * 5000) + 1
         const newReservation = { id, x }
         setReservations([ ...reservations, newReservation ])
@@ -30,17 +32,18 @@ const Content=()=>{
       <div className='flex p-8 shadow-md justify-center items-center'>
         <div className='Content rounded-lg p-8 space-y-6 bg-white'>
             <div className='flex justify-between p-2'>
-            <h3 className='text-3xl text-initialColor font-bold '>
+            <h3 className='text-3xl text-black text-initialColor font-bold '>
                 Booking and Reservations
             </h3>
             <Button onClick={popUp} variant='contained' color='success'>Add</Button>
             </div>
             <AddReservation popUp={popUp} onAdd={addReservations}/>
             {reservations.length > 0 ? <Reservations onToggle={ToggleReminder} onDelete={deleteReservation} reservations={reservations}/> : 
-            <p className='text-2xl font-bold text-bgActive p-4'>
+            <p className='font-bold text-initClr p-4'>
                 Reservations completed will be shown here
             </p>
-                }
+             }
+             
         </div>
       </div>
     )
