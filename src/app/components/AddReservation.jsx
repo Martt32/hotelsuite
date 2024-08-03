@@ -87,7 +87,7 @@ const AddReservation=({ popUp, onAdd })=>{
              </div>
                 <div id='step2' className='form-step grid grid-cols-4 gap-5 p-6'>
                     {rooms.map((room, index) =>(
-                    <div onClick={nextStep} className='scale p-4 cursor-pointer rounded-lg bg-white'>
+                    <div key={index} onClick={nextStep} className='scale p-4 cursor-pointer rounded-lg bg-white'>
                        <img src='room.jpg' alt=''/>
                        <p className='font-bold text-initClr p-1'>Name: Suite {room.name}</p>
                        <p className='font-bold text-initClr p-1'>Price: <strike>N</strike>{room.price}</p>
